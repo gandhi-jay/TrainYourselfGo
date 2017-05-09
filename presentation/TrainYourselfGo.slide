@@ -1,12 +1,28 @@
-TrainYourselfGo
+TrainYourselfGo by Jay
 08 May 2017
 
 Jay Gandhi
 Developer, Discover Dollar
 i@gandhijay.com
-@jaygandhik
+@gandhijayk
 
 * About Me
 
 - Developer, Discover Dollar
-- JavaScript/Java Developer for 1+ years
+- Node.js/React/Angular, Python & Java for 1 Year
+- Big Data technologies - for 6 Months
+- Learning golang
+- Inspired by Baiju Muthukadan(@nogenerics), Redhat
+
+* Software Developer Skills
+
+Skills required for a software developer:
+
+- Programming Language - Golang
+- Text Editor - Atom.io
+- Source Code Management - Git, Github
+- Operating System - Bash on Windows
+
+* Hello <name> in Go
+
+.play code/1_helloworld.go
