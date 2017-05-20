@@ -27,14 +27,6 @@ Skills required for a software developer:
 
 .play code/1_helloworld.go
 
-* Requirements
-
-- Experience in some other programming language (Python, Ruby, Java, C# etc.)
-- Know how to use [[http://git-scm.com/doc][Git version control system]]
-- Comfortable with one shell (Bash, Zsh, PowerShell etc.)
-- Comfortable with one text editor (Vim, Emacs, VS Code etc.)
-- Internet connectivity should be ensured
-
 * Facts for Go?
 
 - Created at Google by Robert Griesemer, Rob Pike and Ken Thompson
@@ -61,8 +53,7 @@ Skills required for a software developer:
 
 - Fast build (in seconds)
 - Unused imports and variables raise compile error
-- Operating Systems: Windows, GNU/Linux, Mac OS X, *BSD etc.
-- CPU Architectures: amd64, 386, arm etc.
+- Almost all Operating System and System architectures.
 - Cross compilation
 - Standard library
 - No exceptions ([[https://blog.golang.org/errors-are-values][Errors are values]])
