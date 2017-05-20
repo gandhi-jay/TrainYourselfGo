@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"../stringutil"
+
 	"../icomefromalaska"
+	"../stringutil"
 )
 
 func main() {
