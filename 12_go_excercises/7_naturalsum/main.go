@@ -15,7 +15,6 @@ func main() {
 		}
 		if i%5 == 0 {
 			sum += i
-			continue
 		}
 	}
 	fmt.Println(sum)
