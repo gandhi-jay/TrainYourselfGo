@@ -14,6 +14,7 @@ func main() {
 
 	// Another way function expression with closure
 	d := makeGreeter("Jay")
+	fmt.Printf("%T \n", d)
 	fmt.Println(d())
 }
 
