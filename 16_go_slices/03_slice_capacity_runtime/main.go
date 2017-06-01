@@ -18,7 +18,4 @@ func main() {
 	// When slice reaches it's thresold(beyond capacity), it doubles it's capacity.
 	// Performance cost will come into play.
 
-	// Refer for make and new- https://stackoverflow.com/questions/25358130/what-is-the-difference-between-new-and-make
-	// and https://dave.cheney.net/2014/08/17/go-has-both-make-and-new-functions-what-gives
-
 }
