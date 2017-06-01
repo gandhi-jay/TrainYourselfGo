@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	// String
 	var records [][]string
 	// student 1
 	student1 := make([]string, 4)
@@ -22,4 +23,15 @@ func main() {
 	records = append(records, student2)
 	// print
 	fmt.Println(records)
+
+	// Int
+	transactions := make([][]int, 0, 3)
+	for i := 0; i < 3; i++ {
+		transaction := make([]int, 0, 4)
+		for j := 0; j < 4; j++ {
+			transaction = append(transaction, i+j)
+		}
+		transactions = append(transactions, transaction)
+	}
+	fmt.Println(transactions)
 }

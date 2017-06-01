@@ -3,13 +3,23 @@ package main
 import "fmt"
 
 func main() {
-	transactions := make([][]int, 0, 3)
-	for i := 0; i < 3; i++ {
-		transaction := make([]int, 0, 4)
-		for j := 0; j < 4; j++ {
-			transaction = append(transaction, i+j)
-		}
-		transactions = append(transactions, transaction)
-	}
-	fmt.Println(transactions)
+	// var slice
+	var x []int
+	var xx [][]int
+	// Shorthand slice
+	y := []int{1, 2, 3}
+	yy := [][]int{{1, 2}, {1, 2, 3}}
+	// Make slice
+	z := make([]int, 3, 5)
+	zz := make([][]int, 3, 5)
+
+	// Println
+	fmt.Println("Printing all - ", x, y, z)
+	// Multidimensional
+	fmt.Println("Printing all - ", xx, yy, zz)
+
+	// Comparing with nil
+	fmt.Println(x == nil)
+	fmt.Println(y == nil)
+	fmt.Println(z == nil)
 }
