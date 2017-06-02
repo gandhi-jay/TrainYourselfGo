@@ -24,8 +24,10 @@ func main() {
 	// like `0` or `""`. Here we didn't need the value
 	// itself, so we ignored it with the _blank identifier_
 	// `_`.
-	_, prs := m["k2"]
-	fmt.Println("prs:", prs)
+	v, prs := m["k2"]
+	v1, prs1 := m["k1"]
+	fmt.Println("k2:", prs, v)   // It will give zero value
+	fmt.Println("k2:", prs1, v1) // It will give current value
 
 	// you can declared and initialize a new map in
 	// the same line with syntax
