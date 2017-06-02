@@ -28,6 +28,5 @@ func main() {
 	g1["Gandhi"] = "Halo"
 	fmt.Println(g1)
 
-	// It will work with g1, g2 and g3 but not with
-	// g1.
+	// It will work with g1, g2 and g3 but not with g1.
 }
