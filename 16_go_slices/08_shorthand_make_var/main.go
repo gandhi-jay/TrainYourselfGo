@@ -4,14 +4,14 @@ import "fmt"
 
 func main() {
 	// var slice
-	var x []int
-	var xx [][]int
+	var x []int    // Underlying array not made
+	var xx [][]int // Underlying array not made
 	// Shorthand slice
-	y := []string{}
-	yy := [][]string{}
+	y := []string{}    // Underlying array made
+	yy := [][]string{} // Underlying array made
 	// Make slice
-	z := make([]int, 3, 5)
-	zz := make([][]int, 3, 5)
+	z := make([]int, 3, 5)    // Underlying array made
+	zz := make([][]int, 3, 5) // Underlying array made
 
 	// Can't use, Index out of range
 	// y[0] = "Han Solo"
