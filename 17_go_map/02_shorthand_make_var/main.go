@@ -5,6 +5,13 @@ import "fmt"
 func main() {
 	var g map[string]string
 	var g1 = make(map[string]string)
+	// optional capacity can be added
+	// g2 :=  make(map[string]string, 100)
+	// Golang Spec
+	// The initial capacity does not bound its size:
+	// maps grow to accommodate the number of items stored in them,
+	// with the exception of nil maps.
+	// A nil map is equivalent to an empty map except that no elements may be added.
 	g2 := make(map[string]string)
 	g3 := map[string]string{}
 

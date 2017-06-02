@@ -8,6 +8,10 @@ func main() {
 	// value of unintialized map is nil
 	// Map is reference type
 	m := make(map[string]int)
+	// Golang SPec
+	// A map is an unordered group of elements of one type,
+	// called the element type, indexed by a set of
+	// unique keys of another type, called the key type.
 
 	m["k1"] = 21
 	m["k2"] = 22
