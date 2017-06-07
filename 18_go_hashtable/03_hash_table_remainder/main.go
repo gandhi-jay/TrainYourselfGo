@@ -21,22 +21,21 @@ func main() {
 	scanner.Split(bufio.ScanWords)
 
 	// create slice to hold counts
-	buckets := make([]int, 200)
+	buckets := make([]int, 12)
 	// All values by default will be 0s
 
 	for scanner.Scan() {
 		// Get the words using scanner.Text()
-		n := hashBucket(scanner.Text())
+		n := hashBucket(scanner.Text(), 12)
 
 		// Increments the count
 		buckets[n]++
 	}
 
-	fmt.Println(buckets[65:123])
-
+	fmt.Println(buckets)
 }
 
 // Use lower letter so it won't available outside of package.
-func hashBucket(word string) int {
-	return int(word[0])
+func hashBucket(word string, buckets int) int {
+	return (int(word[0])) % buckets
 }
