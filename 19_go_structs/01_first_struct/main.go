@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 // Creating Person type
+// Data we call as it
 type person struct {
 	first string
 	last  string
