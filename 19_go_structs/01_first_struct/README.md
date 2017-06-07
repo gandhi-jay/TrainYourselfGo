@@ -8,16 +8,19 @@ of which has a name and a type. Field names may be specified explicitly (Identif
 
 ### Go is object oriented
 
-1. Encapsulation
+
+
+
+- Encapsulation
   - state ("fields")
   - behavior ("methods")
   - exported / un-exported
 
-2. Reusability
+- Reusability
   - inheritance ("embedded types")
 
-3. Polymorphism
+- Polymorphism
   - interfaces
 
-4. Overriding
+- Overriding
   - "promotion"
