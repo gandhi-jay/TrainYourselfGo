@@ -24,3 +24,20 @@ of which has a name and a type. Field names may be specified explicitly (Identif
 
 - Overriding
   - "promotion"
+
+### Traditional OOP
+
+- Classes
+  - data structure describing a type of object
+  - you can then create "instances"/"objects" from the
+  - class/blue-print
+  - classes hold both:
+  - state / data / fields
+  - behavior / methods
+  - Public / private
+
+### Inheritance in GO
+
+In Go:
+  - you don't create classes, you create a type
+  - you don't instantiate, you create a value of a type
