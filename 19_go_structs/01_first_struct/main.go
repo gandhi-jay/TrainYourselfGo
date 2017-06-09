@@ -31,6 +31,8 @@ func main() {
 	fmt.Printf("%T\n", super)                       // Type of var super
 	fmt.Println(super.first, super.last, super.age) // access field of the struct
 
+	p1 := person{}
+	fmt.Println(p1) // It will print dafault values of each field type
 	// Checking on your own type.
 	var myAge age
 	myAge = 21
@@ -40,7 +42,6 @@ func main() {
 	var yourAge age
 	yourAge = 32
 	fmt.Printf("%T %v \n", yourAge, yourAge)
-
 	// this won't work:
 	//	 fmt.Println(myAge + yourAge)
 
