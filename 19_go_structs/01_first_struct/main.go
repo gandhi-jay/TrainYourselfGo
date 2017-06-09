@@ -21,6 +21,7 @@ type person struct {
 }
 
 // You can create your own type
+// Alias type - Not idiomatic
 type age int
 
 func main() {
@@ -34,4 +35,27 @@ func main() {
 	var myAge age
 	myAge = 21
 	fmt.Printf("%T %v \n", myAge, myAge) // Check type and it's value
+
+	// Creating another one
+	var yourAge age
+	yourAge = 32
+	fmt.Printf("%T %v \n", yourAge, yourAge)
+
+	// this won't work:
+	//	 fmt.Println(myAge + yourAge)
+
+	// this conversion works:
+	fmt.Println(int(myAge) + int(yourAge))
+	// User defined types - we declare a new type, age
+	// the underlying type of age: int
+	//
+	// conversion: int(myAge)
+	// coverting type age to type int
+	//
+	// This is an example only. IT is a bad practice to alias types
+	// Only do use this kind of aliasing when you require to attach method to a type
+	//  see the time package for an example of this
+	//   godoc.org/time
+	//   type Duration int64
+	// Duration has methods attached to it
 }
