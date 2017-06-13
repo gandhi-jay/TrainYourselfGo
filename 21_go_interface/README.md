@@ -5,6 +5,12 @@
   - Interfaces are types that just declare behavior.
     - This behavior is never implemented by the interface type directly, but instead by user-defined types via methods. When a user-defined type implements the set of methods declared by an interface type, values of the user-defined type can be assigned to values of the interface type.
     - This assignment stores the value of the user-defined type into the interface value.
+  - Interfaces are types that just declare behavior. This behavior is never implemented by the interface type directly, but instead by user-defined types via methods.
+  - When a user-defined type implements the set of methods declared by an interface type, values of the user-defined type can be assigned to values of the interface type. This assignment stores the value of the user-defined type into the interface value.
+  - If a method call is made against an interface value, the equivalent method for the
+ stored user-defined value is executed.
+  - Since any user-defined type can implement any interface, method calls against an interface value are polymorphic in nature.
+  - The user-defined type in this relationship is often called a concrete type, since interface values have no concrete behavior without the implementation of the stored user-defined value.
 
 - [<b>Tomas Senart</b>](https://youtu.be/xyDkyFjzFVc)
   - <b>Single Responsibility Principal</b>
