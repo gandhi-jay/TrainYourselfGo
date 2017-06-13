@@ -18,11 +18,17 @@
     - If you don't follow ISP, your interface will be huge and people will have access to the functionality they don't need or you don't want them to use.
   - <b>Benefits of ISP.</b>
       - In go, they coexist with function as elegent and very powerful.
+
       ```
         // A client sends http.requests and returns http.response or error in case of failures
         type Client interface {
           Do(*http.Request) (*http.Response, error)
         }
         // ClientFunc is a func that impements the client interface
+        // Possible because in go any type can have method attached to it.
         type ClientFunc func(*http.Request) (*http.Response, error)
+
+        func (f ClientFunc) Do(r *http.Request) (*http.Response, error) {
+          return f(r)
+        }
       ```
