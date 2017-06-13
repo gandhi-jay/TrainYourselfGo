@@ -20,15 +20,21 @@
       - In go, they coexist with function as elegent and very powerful.
 
       ```
-        // A client sends http.requests and returns http.response or error in case of failures
+        // A client sends http.requests and returns http.response or error in case of failures.
+
         type Client interface {
           Do(*http.Request) (*http.Response, error)
         }
+
         // ClientFunc is a func that impements the client interface
         // Possible because in go any type can have method attached to it.
+
         type ClientFunc func(*http.Request) (*http.Response, error)
 
         func (f ClientFunc) Do(r *http.Request) (*http.Response, error) {
           return f(r)
         }
       ```
+      - This is possible in go, any type can have method attached to it which enables function types like this to implement functional interface(single method interface).
+
+  - <b>Decorator Pattern</b>
