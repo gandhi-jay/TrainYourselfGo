@@ -33,6 +33,7 @@ import (
 
 type people []string
 
+// YOu need this three method to implement "Interface" interface
 func (p people) Len() int {
 	return len(p)
 }
