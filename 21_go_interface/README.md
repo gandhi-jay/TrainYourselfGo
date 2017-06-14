@@ -73,3 +73,13 @@
       }
     }
     ```
+- <b>The Go Programming language by Donovan and Kernighan.</b>
+  - Interface types express generalizations or abstractions about the behaviors of other types.
+    - By generalizing, interfaces let us write functions that are more flexible and adaptable because they are not tied to the details of one particular implementation.
+  - Many object-oriented languages have some notion of interfaces, but what makes Go's interfaces so distinctive is that they are SATISFIED IMPLICITLY.
+  - In other words, there's no need to declare all the interfaces that a given CONCRETE TYPE satisfies; simply possessing the necessary methods is enough.
+  - This design lets you create new interfaces that are satisfied by existing CONCRETE TYPES without changing the existing types, which is particularly useful for types defined in packages that you don't control.
+  - All the types we've looked at so far have been CONCRETE TYPES. A CONCRETE TYPE specifies the exact representation of its values and exposes the intrinsic operations of that representation, such as arithmetic for numbers, or indexing, append, and range for slices.
+  - A CONCRETE TYPE may also provide additional behaviors through its methods. When you have a value of a CONCRETE TYPE, you know exactly what is IS and what you can DO with it.
+  - There is another kind of type in Go called an INTERFACE TYPE. An interface is an ABSTRACT TYPE. It doesn't expose the representation or internal structure of its values, or the set of basic operations they support;
+  - It reveals only some of their methods. When you have a value of an interface type, you know nothing about what it IS; you know only what it can DO, or more precisely, what BEHAVIORS ARE PROVIDED BY ITS METHODS.
