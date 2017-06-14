@@ -83,3 +83,41 @@
   - A CONCRETE TYPE may also provide additional behaviors through its methods. When you have a value of a CONCRETE TYPE, you know exactly what is IS and what you can DO with it.
   - There is another kind of type in Go called an INTERFACE TYPE. An interface is an ABSTRACT TYPE. It doesn't expose the representation or internal structure of its values, or the set of basic operations they support;
   - It reveals only some of their methods. When you have a value of an interface type, you know nothing about what it IS; you know only what it can DO, or more precisely, what BEHAVIORS ARE PROVIDED BY ITS METHODS.
+
+  ```
+  type ReadWriter interface {
+    Reader
+    Writer
+  }
+
+  // This is called EMBEDDING an interface.
+  ```
+  - A type SATISFIES an interface if it possesses all the methods the interface requires.
+  - Conceptually, a value of an interface type, or **INTERFACE VALUE**, has two components, a **CONCRETE TYPE** and a **VALUE OF THAT TYPE**. These are called the interface's **DYNAMIC TYPE** and **DYNAMIC VALUE**.
+  - For a statically typed language like **Go**, types are a compile-time concept, so a type is not a value. In our conceptual model, a set of values called **TYPE DESCRIPTORS** provide information about each type, such as its name and methods. In an interface value, the type component is represented by the appropriate type descriptor.
+
+  ```
+  var w io.Writer
+  w = os.Stdout
+  w = new(bytes.Buffer)
+  w = nil
+
+  var w io.Writer
+  w
+  type: nil
+  value: nil
+
+  w = os.Stdout
+  w
+  type: *os.File
+  // value: the address where a value of type os.File is stored
+
+  w = new(bytes.Buffer)
+  w // type: *bytes.Buffer
+  // value: the address where a value of type bytes.Buffer is stored
+
+  w = nil
+  w
+  type: nil
+  value: nil
+  ```
