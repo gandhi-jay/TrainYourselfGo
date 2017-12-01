@@ -12,6 +12,14 @@ func main() {
 	card = newCard()
 
 	fmt.Println(card)
+
+	cards := []string{newCard(), "Seven of Spades"}
+
+	cards = append(cards, "Seven of Diamonds")
+
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 }
 
 func newCard() string {
