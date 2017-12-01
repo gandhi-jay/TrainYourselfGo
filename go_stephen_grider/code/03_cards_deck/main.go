@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	cards := deck{newCard(), "Seven of Spades"}
+	cards := newDeck()
 
 	fmt.Println(cards)
 
