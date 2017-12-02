@@ -9,5 +9,5 @@ func main() {
 
 	cards.shuffle()
 
-	fmt.Println(cards)
+	fmt.Println(cards.toString())
 }
