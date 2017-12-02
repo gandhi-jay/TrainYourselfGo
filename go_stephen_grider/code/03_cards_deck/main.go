@@ -9,7 +9,18 @@ func main() {
 
 	fmt.Println(cards)
 
-	cards.print()
+	// cards.print()
+
+	hand, remainingDeck := deal(cards, 5)
+
+	fmt.Println("Hand")
+
+	hand.print()
+
+	fmt.Println("Remaining Hand")
+
+	remainingDeck.print()
+
 }
 
 func newCard() string {
