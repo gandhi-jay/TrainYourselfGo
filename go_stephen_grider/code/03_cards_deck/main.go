@@ -1,13 +1,11 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	cards := newDeck()
 
-	fmt.Println(cards)
+	// fmt.Println(cards)
 
 	// cards.print()
 
@@ -20,6 +18,10 @@ func main() {
 	fmt.Println("Remaining Hand")
 
 	remainingDeck.print()
+
+	// Converting string to byte slice.
+	// greeting := "Hello, There"
+	// fmt.Println([]byte(greeting))
 
 }
 
