@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // Create a new type of deck
@@ -23,7 +24,7 @@ func (d deck) print() {
 func newDeck() deck {
 	cards := deck{}
 	cardSuits := []string{"Diamonds", "Spades", "Hearts", "Clubs"}
-	cardValues := []string{"Ace", "Two", "Three", "Four", "Five"}
+	cardValues := []string{"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"}
 
 	for _, cardSuit := range cardSuits {
 		for _, cardValue := range cardValues {
@@ -58,9 +59,24 @@ func newDeckFromFile(filename string) deck {
 
 }
 
-func (d deck) shuffle() {
+func (d deck) shuffleDeprecated() {
 	for index := range d {
+		// Go Random number generation works based on Seed
+		// every time seed is same, that's why it's not repeatiting randomize
+		// Based on same seed, generator gives same number of sequence.
 		newPos := rand.Intn(len(d) - 1)
+		d[index], d[newPos] = d[newPos], d[index]
+	}
+}
+
+func (d deck) shuffle() {
+	// Creating new Source for generator based on timestamp
+	source := rand.NewSource(time.Now().UnixNano())
+	// Giving a generator a new source.
+	r := rand.New(source)
+	for index := range d {
+		// Based on generator on new seed.
+		newPos := r.Intn(len(d) - 1)
 		d[index], d[newPos] = d[newPos], d[index]
 	}
 }
