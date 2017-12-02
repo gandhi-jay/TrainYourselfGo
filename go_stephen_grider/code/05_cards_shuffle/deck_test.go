@@ -1,6 +1,7 @@
 package main
 
 import "testing"
+import "os"
 
 func TestNewDeck(t *testing.T) {
 	d := newDeck()
@@ -33,4 +34,21 @@ func TestDeal(t *testing.T) {
 	if (len(d) - len(hand)) != len(remainingDeck) {
 		t.Errorf("Length of remaining should be remaining length(%v), but it's not equal(%v).", (len(d) - len(hand)), len(remainingDeck))
 	}
+}
+
+func TestSaveToDeckAndNewDeckFromFile(t *testing.T) {
+	os.Remove("_decktesting")
+
+	d := newDeck()
+
+	d.saveToFile("_decktesting")
+
+	loadedDeck := newDeckFromFile("_decktesting")
+
+	if len(d) != len(loadedDeck) {
+		t.Errorf("Expected length: %v, but got %v", len(d), len(loadedDeck))
+	}
+
+	os.Remove("_decktesting")
+
 }
