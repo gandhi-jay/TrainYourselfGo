@@ -23,7 +23,7 @@ func (d deck) print() {
 
 func newDeck() deck {
 	cards := deck{}
-	cardSuits := []string{"Diamonds", "Spades", "Hearts", "Clubs"}
+	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	cardValues := []string{"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"}
 
 	for _, cardSuit := range cardSuits {
