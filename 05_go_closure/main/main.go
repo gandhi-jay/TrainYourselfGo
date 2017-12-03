@@ -1,10 +1,11 @@
 package main
 
-import "fmt" 
+import "fmt"
 
 var x int = 123
 var inc int = 312
-func main()  {
+
+func main() {
 	fmt.Println(x)
 	foo()
 
@@ -12,7 +13,7 @@ func main()  {
 	y := 42
 	fmt.Println(y)
 	{
-		fmt.Println(y) // Y can be accessed in inner scope
+		fmt.Println(y) // Y can be accessed in inner scope or you can initialize new one also.
 		z := "Lords of the Ring : The Return of the King"
 		fmt.Println(z)
 	}
@@ -22,11 +23,11 @@ func main()  {
 	fmt.Println(increment())
 }
 
-func foo()  {
+func foo() {
 	fmt.Println(x)
 }
 
-func increment()  int {
+func increment() int {
 	inc++
 	return inc
 }
