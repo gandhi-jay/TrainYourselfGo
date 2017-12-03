@@ -11,7 +11,7 @@ func main() {
 	fmt.Println(foo)              // 97
 	fmt.Printf("%T\n", foo)       // int32
 	fmt.Printf("%T\n", rune(foo)) // int32
-	// if you've declared foo := "a" then you can't convert into rune
+	// if you've declared foo := "a" then you can't convert into rune directly
 	// Row String literal -> `Jay` (backticks)
 	// interpreted string literal -> "Jay" Double Quotes
 	// You can easily print with Raw string literal
