@@ -3,10 +3,11 @@ package main
 import "fmt"
 
 func zero(z *int) {
-	fmt.Println(z)
+	fmt.Println("In Method", z)
 	*z = 0
 }
 
+// Watch Stephen Grider's Pointer.
 func main() {
 	x := 5
 	fmt.Println(&x)
