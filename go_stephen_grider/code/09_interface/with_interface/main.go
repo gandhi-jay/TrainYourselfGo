@@ -50,3 +50,13 @@ func (gujaratiBot) getGreeting() string {
 func printGreeting(b bot) {
 	fmt.Println(b.getGreeting())
 }
+
+// Concrete Type
+// map
+// struct
+// int
+// string
+// englishBot
+
+// Interface Type
+// bot
